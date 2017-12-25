@@ -7,13 +7,7 @@ namespace CarShowroom
     {
         public static void Main(string[] args)
         {
-            //TODO гибкий выбор модели
-            //TODO если нет машин марки- выводить сообщение с пердложением предзаказа 
-            // д/н, да - идем в предзаказ, нет - идем в начало
-            //TODO вынести выбор модели, оплаты в отдельную функцию
-            //TODO добавление команды
-            //TODO добавление 1 шага купить/предзаказать
-            //TODO проработать предазаказ(декоратор)
+           
             string buyOrPreorder = "";
 
             Client client = new Client();
@@ -319,7 +313,8 @@ namespace CarShowroom
                     chosenMark = Console.ReadLine();
                 } while (chosenMark != "1" && chosenMark != "2" && chosenMark != "3");
                 //AUDI
-                if(chosenMark == "1") {
+                if (chosenMark == "1")
+                {
                     Console.WriteLine("Выберите модель");
                     Console.WriteLine("1) Audi A8\n2) Audi R8\n3) Audi TT");
                     do
@@ -400,44 +395,287 @@ namespace CarShowroom
                                 break;
                         }
                     }
-                            if (chosenModel == "3")
-                            {
-                                Console.WriteLine("Выбранное авто: {0}", audiTT.GetName());
-                                Console.WriteLine("Цена: {0}", audiTT.GetCost());
-                                Console.WriteLine("Выберите дополнительную опцию:");
-                                Console.WriteLine("1)Кондиционер(+500$)" +
-                                                  "\n2)Двигатель(+15000$)" +
-                                                  "\n3)Роспись(+2000$)" +
-                                                  "\n4)Покрышки(+900$)");
-                                do
-                                {
-                                    chosenOption = Console.ReadLine();
-                                } while (chosenOption != "1" && chosenOption != "2" && chosenOption != "3" && chosenOption != "4");
-                                switch (chosenOption)
-                                {
-                                    case "1":
-                                        var nwAudiTTCond = new Conditioner(new AudiTT());
-                                        Console.WriteLine("Ваш авто {0} ждет вас через месяц", nwAudiTTCond.GetName());
-                                        Console.WriteLine("Стоимость: {0}", nwAudiTTCond.GetCost());
-                                        break;
-                                    case "2":
-                                        var nwAudiTTEng = new Engine(new AudiTT());
-                                        Console.WriteLine("Ваш авто {0} ждет вас через месяц", nwAudiTTEng.GetName());
-                                        Console.WriteLine("Стоимость: {0}", nwAudiTTEng.GetCost());
-                                        break;
-                                    case "3":
-                                        var newAudiTTMeh = new Mehendi(new AudiTT());
-                                        Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiTTMeh.GetName());
-                                        Console.WriteLine("Стоимость: {0}", newAudiTTMeh.GetCost());
-                                        break;
-                                    case "4":
-                                        var newAudiTTTires = new Tires(new AudiTT());
-                                        Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiTTTires.GetName());
-                                        Console.WriteLine("Стоимость: {0}", newAudiTTTires.GetCost());
-                                        break;
-                                }
-                       // Console.WriteLine("Ваш авто {0} ждет вас через месяц", );
-
+                    if (chosenModel == "3")
+                    {
+                        Console.WriteLine("Выбранное авто: {0}", audiTT.GetName());
+                        Console.WriteLine("Цена: {0}", audiTT.GetCost());
+                        Console.WriteLine("Выберите дополнительную опцию:");
+                        Console.WriteLine("1)Кондиционер(+500$)" +
+                                          "\n2)Двигатель(+15000$)" +
+                                          "\n3)Роспись(+2000$)" +
+                                          "\n4)Покрышки(+900$)");
+                        do
+                        {
+                            chosenOption = Console.ReadLine();
+                        } while (chosenOption != "1" && chosenOption != "2" && chosenOption != "3" && chosenOption != "4");
+                        switch (chosenOption)
+                        {
+                            case "1":
+                                var nwAudiTTCond = new Conditioner(new AudiTT());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", nwAudiTTCond.GetName());
+                                Console.WriteLine("Стоимость: {0}", nwAudiTTCond.GetCost());
+                                break;
+                            case "2":
+                                var nwAudiTTEng = new Engine(new AudiTT());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", nwAudiTTEng.GetName());
+                                Console.WriteLine("Стоимость: {0}", nwAudiTTEng.GetCost());
+                                break;
+                            case "3":
+                                var newAudiTTMeh = new Mehendi(new AudiTT());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiTTMeh.GetName());
+                                Console.WriteLine("Стоимость: {0}", newAudiTTMeh.GetCost());
+                                break;
+                            case "4":
+                                var newAudiTTTires = new Tires(new AudiTT());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiTTTires.GetName());
+                                Console.WriteLine("Стоимость: {0}", newAudiTTTires.GetCost());
+                                break;
+                        }
+                        // Console.WriteLine("Ваш авто {0} ждет вас через месяц", );
+                    }
+                }
+                //BMW
+                if (chosenMark == "1")
+                {
+                    Console.WriteLine("Выберите модель");
+                    Console.WriteLine("1) BMW750\n2) BMWM5\n3) BMWX2");
+                    do
+                    {
+                        chosenModel = Console.ReadLine();
+                    } while (chosenModel != "1" && chosenModel != "2" && chosenModel != "3");
+                    if (chosenModel == "1")
+                    {
+                        Console.WriteLine("Выбранное авто: {0}", bmw750.GetName());
+                        Console.WriteLine("Цена: {0}", bmw750.GetCost());
+                        Console.WriteLine("Выберите дополнительную опцию:");
+                        Console.WriteLine("1)Кондиционер(+500$)" +
+                                          "\n2)Двигатель(+15000$)" +
+                                          "\n3)Роспись(+2000$)" +
+                                          "\n4)Покрышки(+900$)");
+                        do
+                        {
+                            chosenOption = Console.ReadLine();
+                        } while (chosenOption != "1" && chosenOption != "2" && chosenOption != "3" && chosenOption != "4");
+                        switch (chosenOption)
+                        {
+                            case "1":
+                                var nwAudiA8Cond = new Conditioner(new BMW750());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", nwAudiA8Cond.GetName());
+                                Console.WriteLine("Стоимость: {0}", nwAudiA8Cond.GetCost());
+                                break;
+                            case "2":
+                                var newAudiA8Eng = new Engine(new BMW750());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiA8Eng.GetName());
+                                Console.WriteLine("Стоимость: {0}", newAudiA8Eng.GetCost());
+                                break;
+                            case "3":
+                                var newAudiA8Meh = new Mehendi(new BMW750());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiA8Meh.GetName());
+                                Console.WriteLine("Стоимость: {0}", newAudiA8Meh.GetCost());
+                                break;
+                            case "4":
+                                var newAudiA8Tires = new Tires(new BMW750());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiA8Tires.GetName());
+                                Console.WriteLine("Стоимость: {0}", newAudiA8Tires.GetCost());
+                                break;
+                        }
+                    }
+                    if (chosenModel == "2")
+                    {
+                        Console.WriteLine("Выбранное авто: {0}", bmwM5.GetName());
+                        Console.WriteLine("Цена: {0}", bmwM5.GetCost());
+                        Console.WriteLine("Выберите дополнительную опцию:");
+                        Console.WriteLine("1)Кондиционер(+500$)" +
+                                          "\n2)Двигатель(+15000$)" +
+                                          "\n3)Роспись(+2000$)" +
+                                          "\n4)Покрышки(+900$)");
+                        do
+                        {
+                            chosenOption = Console.ReadLine();
+                        } while (chosenOption != "1" && chosenOption != "2" && chosenOption != "3" && chosenOption != "4");
+                        switch (chosenOption)
+                        {
+                            case "1":
+                                var nwAudiR8Cond = new Conditioner(new BMWM5());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", nwAudiR8Cond.GetName());
+                                Console.WriteLine("Стоимость: {0}", nwAudiR8Cond.GetCost());
+                                break;
+                            case "2":
+                                var newAudiR8Eng = new Engine(new BMWM5());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiR8Eng.GetName());
+                                Console.WriteLine("Стоимость: {0}", newAudiR8Eng.GetCost());
+                                break;
+                            case "3":
+                                var newAudiR8Meh = new Mehendi(new BMWM5());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiR8Meh.GetName());
+                                Console.WriteLine("Стоимость: {0}", newAudiR8Meh.GetCost());
+                                break;
+                            case "4":
+                                var newAudiR8Tires = new Tires(new BMWM5());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiR8Tires.GetName());
+                                Console.WriteLine("Стоимость: {0}", newAudiR8Tires.GetCost());
+                                break;
+                        }
+                    }
+                    if (chosenModel == "3")
+                    {
+                        Console.WriteLine("Выбранное авто: {0}", bmwX2.GetName());
+                        Console.WriteLine("Цена: {0}", bmwX2.GetCost());
+                        Console.WriteLine("Выберите дополнительную опцию:");
+                        Console.WriteLine("1)Кондиционер(+500$)" +
+                                          "\n2)Двигатель(+15000$)" +
+                                          "\n3)Роспись(+2000$)" +
+                                          "\n4)Покрышки(+900$)");
+                        do
+                        {
+                            chosenOption = Console.ReadLine();
+                        } while (chosenOption != "1" && chosenOption != "2" && chosenOption != "3" && chosenOption != "4");
+                        switch (chosenOption)
+                        {
+                            case "1":
+                                var nwAudiTTCond = new Conditioner(new BMWX2());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", nwAudiTTCond.GetName());
+                                Console.WriteLine("Стоимость: {0}", nwAudiTTCond.GetCost());
+                                break;
+                            case "2":
+                                var nwAudiTTEng = new Engine(new BMWX2());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", nwAudiTTEng.GetName());
+                                Console.WriteLine("Стоимость: {0}", nwAudiTTEng.GetCost());
+                                break;
+                            case "3":
+                                var newAudiTTMeh = new Mehendi(new BMWX2());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiTTMeh.GetName());
+                                Console.WriteLine("Стоимость: {0}", newAudiTTMeh.GetCost());
+                                break;
+                            case "4":
+                                var newAudiTTTires = new Tires(new BMWX2());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiTTTires.GetName());
+                                Console.WriteLine("Стоимость: {0}", newAudiTTTires.GetCost());
+                                break;
+                        }
+                        // Console.WriteLine("Ваш авто {0} ждет вас через месяц", );
+                    }
+                }
+                //MERCEDES
+                if (chosenMark == "1")
+                {
+                    Console.WriteLine("Выберите модель");
+                    Console.WriteLine("1) Audi A8\n2) Audi R8\n3) Audi TT");
+                    do
+                    {
+                        chosenModel = Console.ReadLine();
+                    } while (chosenModel != "1" && chosenModel != "2" && chosenModel != "3");
+                    if (chosenModel == "1")
+                    {
+                        Console.WriteLine("Выбранное авто: {0}", audiA8.GetName());
+                        Console.WriteLine("Цена: {0}", audiA8.GetCost());
+                        Console.WriteLine("Выберите дополнительную опцию:");
+                        Console.WriteLine("1)Кондиционер(+500$)" +
+                                          "\n2)Двигатель(+15000$)" +
+                                          "\n3)Роспись(+2000$)" +
+                                          "\n4)Покрышки(+900$)");
+                        do
+                        {
+                            chosenOption = Console.ReadLine();
+                        } while (chosenOption != "1" && chosenOption != "2" && chosenOption != "3" && chosenOption != "4");
+                        switch (chosenOption)
+                        {
+                            case "1":
+                                var nwAudiA8Cond = new Conditioner(new AudiA8());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", nwAudiA8Cond.GetName());
+                                Console.WriteLine("Стоимость: {0}", nwAudiA8Cond.GetCost());
+                                break;
+                            case "2":
+                                var newAudiA8Eng = new Engine(new AudiA8());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiA8Eng.GetName());
+                                Console.WriteLine("Стоимость: {0}", newAudiA8Eng.GetCost());
+                                break;
+                            case "3":
+                                var newAudiA8Meh = new Mehendi(new AudiA8());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiA8Meh.GetName());
+                                Console.WriteLine("Стоимость: {0}", newAudiA8Meh.GetCost());
+                                break;
+                            case "4":
+                                var newAudiA8Tires = new Tires(new AudiA8());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiA8Tires.GetName());
+                                Console.WriteLine("Стоимость: {0}", newAudiA8Tires.GetCost());
+                                break;
+                        }
+                    }
+                    if (chosenModel == "2")
+                    {
+                        Console.WriteLine("Выбранное авто: {0}", audiR8.GetName());
+                        Console.WriteLine("Цена: {0}", audiR8.GetCost());
+                        Console.WriteLine("Выберите дополнительную опцию:");
+                        Console.WriteLine("1)Кондиционер(+500$)" +
+                                          "\n2)Двигатель(+15000$)" +
+                                          "\n3)Роспись(+2000$)" +
+                                          "\n4)Покрышки(+900$)");
+                        do
+                        {
+                            chosenOption = Console.ReadLine();
+                        } while (chosenOption != "1" && chosenOption != "2" && chosenOption != "3" && chosenOption != "4");
+                        switch (chosenOption)
+                        {
+                            case "1":
+                                var nwAudiR8Cond = new Conditioner(new AudiR8());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", nwAudiR8Cond.GetName());
+                                Console.WriteLine("Стоимость: {0}", nwAudiR8Cond.GetCost());
+                                break;
+                            case "2":
+                                var newAudiR8Eng = new Engine(new AudiR8());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiR8Eng.GetName());
+                                Console.WriteLine("Стоимость: {0}", newAudiR8Eng.GetCost());
+                                break;
+                            case "3":
+                                var newAudiR8Meh = new Mehendi(new AudiR8());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiR8Meh.GetName());
+                                Console.WriteLine("Стоимость: {0}", newAudiR8Meh.GetCost());
+                                break;
+                            case "4":
+                                var newAudiR8Tires = new Tires(new AudiR8());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiR8Tires.GetName());
+                                Console.WriteLine("Стоимость: {0}", newAudiR8Tires.GetCost());
+                                break;
+                        }
+                    }
+                    if (chosenModel == "3")
+                    {
+                        Console.WriteLine("Выбранное авто: {0}", audiTT.GetName());
+                        Console.WriteLine("Цена: {0}", audiTT.GetCost());
+                        Console.WriteLine("Выберите дополнительную опцию:");
+                        Console.WriteLine("1)Кондиционер(+500$)" +
+                                          "\n2)Двигатель(+15000$)" +
+                                          "\n3)Роспись(+2000$)" +
+                                          "\n4)Покрышки(+900$)");
+                        do
+                        {
+                            chosenOption = Console.ReadLine();
+                        } while (chosenOption != "1" && chosenOption != "2" && chosenOption != "3" && chosenOption != "4");
+                        switch (chosenOption)
+                        {
+                            case "1":
+                                var nwAudiTTCond = new Conditioner(new AudiTT());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", nwAudiTTCond.GetName());
+                                Console.WriteLine("Стоимость: {0}", nwAudiTTCond.GetCost());
+                                break;
+                            case "2":
+                                var nwAudiTTEng = new Engine(new AudiTT());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", nwAudiTTEng.GetName());
+                                Console.WriteLine("Стоимость: {0}", nwAudiTTEng.GetCost());
+                                break;
+                            case "3":
+                                var newAudiTTMeh = new Mehendi(new AudiTT());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiTTMeh.GetName());
+                                Console.WriteLine("Стоимость: {0}", newAudiTTMeh.GetCost());
+                                break;
+                            case "4":
+                                var newAudiTTTires = new Tires(new AudiTT());
+                                Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiTTTires.GetName());
+                                Console.WriteLine("Стоимость: {0}", newAudiTTTires.GetCost());
+                                break;
+                        }
+                        // Console.WriteLine("Ваш авто {0} ждет вас через месяц", );
                     }
                 }
             }
