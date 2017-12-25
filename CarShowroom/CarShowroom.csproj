@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{7F7C2273-7CE0-4ADE-A3BC-F9579B9E570E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CarShowroom</RootNamespace>
+    <AssemblyName>CarShowroom</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CarShowroom.cs" />
+    <Compile Include="Mercedes.cs" />
+    <Compile Include="BMW.cs" />
+    <Compile Include="Audi.cs" />
+    <Compile Include="Component.cs" />
+    <Compile Include="MercedesC63.cs" />
+    <Compile Include="MercedesS600.cs" />
+    <Compile Include="MercedesSLS63.cs" />
+    <Compile Include="AudiR8.cs" />
+    <Compile Include="AudiA8.cs" />
+    <Compile Include="AudiTT.cs" />
+    <Compile Include="BMWM5.cs" />
+    <Compile Include="BMW750.cs" />
+    <Compile Include="BMWX2.cs" />
+    <Compile Include="Decorator\Engine.cs" />
+    <Compile Include="Decorator\Tires.cs" />
+    <Compile Include="Decorator\Conditioner.cs" />
+    <Compile Include="Decorator\Mehendi.cs" />
+    <Compile Include="Options.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="CarShowroomOnCommand.cs" />
+    <Compile Include="ICommand.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Decorator\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

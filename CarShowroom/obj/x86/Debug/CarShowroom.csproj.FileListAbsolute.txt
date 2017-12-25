@@ -1,0 +1,5 @@
+/Users/alisa/projects/CarShowroom/CarShowroom/bin/Debug/CarShowroom.exe
+/Users/alisa/projects/CarShowroom/CarShowroom/bin/Debug/CarShowroom.pdb
+/Users/alisa/projects/CarShowroom/CarShowroom/obj/x86/Debug/CarShowroom.csproj.CoreCompileInputs.cache
+/Users/alisa/projects/CarShowroom/CarShowroom/obj/x86/Debug/CarShowroom.exe
+/Users/alisa/projects/CarShowroom/CarShowroom/obj/x86/Debug/CarShowroom.pdb

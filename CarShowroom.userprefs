@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{7F7C2273-7CE0-4ADE-A3BC-F9579B9E570E}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CarShowroom/ICommand.cs">
+    <Files>
+      <File FileName="CarShowroom/Program.cs" Line="65" Column="19" />
+      <File FileName="CarShowroom/CarShowroom.cs" Line="52" Column="13" />
+      <File FileName="CarShowroom/Mercedes.cs" Line="13" Column="33" />
+      <File FileName="CarShowroom/BMW.cs" Line="8" Column="9" />
+      <File FileName="CarShowroom/Audi.cs" Line="8" Column="9" />
+      <File FileName="CarShowroom/Component.cs" Line="26" Column="9" />
+      <File FileName="CarShowroom/MercedesC63.cs" Line="14" Column="10" />
+      <File FileName="CarShowroom/MercedesS600.cs" Line="14" Column="10" />
+      <File FileName="CarShowroom/MercedesSLS63.cs" Line="7" Column="10" />
+      <File FileName="CarShowroom/AudiR8.cs" Line="8" Column="26" />
+      <File FileName="CarShowroom/AudiA8.cs" Line="9" Column="28" />
+      <File FileName="CarShowroom/AudiTT.cs" Line="9" Column="26" />
+      <File FileName="CarShowroom/BMWM5.cs" Line="8" Column="29" />
+      <File FileName="CarShowroom/BMW750.cs" Line="12" Column="10" />
+      <File FileName="CarShowroom/BMWX2.cs" Line="15" Column="9" />
+      <File FileName="CarShowroom/Properties/Conditioner.cs" Line="10" Column="2" />
+      <File FileName="CarShowroom/Properties/AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="CarShowroom/Decorator/Conditioner.cs" Line="11" Column="30" />
+      <File FileName="CarShowroom/Decorator/Engine.cs" Line="16" Column="50" />
+      <File FileName="CarShowroom/Decorator/Mehendi.cs" Line="16" Column="48" />
+      <File FileName="CarShowroom/Decorator/Tires.cs" Line="16" Column="50" />
+      <File FileName="CarShowroom/Options.cs" Line="8" Column="10" />
+      <File FileName="CarShowroom/Client.cs" Line="17" Column="27" />
+      <File FileName="CarShowroom/CarShowroomOnCommand.cs" Line="11" Column="22" />
+      <File FileName="CarShowroom/ICommand.cs" Line="7" Column="23" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.CarShowroom PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
