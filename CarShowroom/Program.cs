@@ -560,15 +560,15 @@ namespace CarShowroom
                 if (chosenMark == "1")
                 {
                     Console.WriteLine("Выберите модель");
-                    Console.WriteLine("1) Audi A8\n2) Audi R8\n3) Audi TT");
+                    Console.WriteLine("1) Mercedes C63\n2) Mercedes S600\n3) Mercedes SLS63");
                     do
                     {
                         chosenModel = Console.ReadLine();
                     } while (chosenModel != "1" && chosenModel != "2" && chosenModel != "3");
                     if (chosenModel == "1")
                     {
-                        Console.WriteLine("Выбранное авто: {0}", audiA8.GetName());
-                        Console.WriteLine("Цена: {0}", audiA8.GetCost());
+                        Console.WriteLine("Выбранное авто: {0}", mercedesC63.GetName());
+                        Console.WriteLine("Цена: {0}", mercedesC63.GetCost());
                         Console.WriteLine("Выберите дополнительную опцию:");
                         Console.WriteLine("1)Кондиционер(+500$)" +
                                           "\n2)Двигатель(+15000$)" +
@@ -581,22 +581,22 @@ namespace CarShowroom
                         switch (chosenOption)
                         {
                             case "1":
-                                var nwAudiA8Cond = new Conditioner(new AudiA8());
+                                var nwAudiA8Cond = new Conditioner(new MercedesC63());
                                 Console.WriteLine("Ваш авто {0} ждет вас через месяц", nwAudiA8Cond.GetName());
                                 Console.WriteLine("Стоимость: {0}", nwAudiA8Cond.GetCost());
                                 break;
                             case "2":
-                                var newAudiA8Eng = new Engine(new AudiA8());
+                                var newAudiA8Eng = new Engine(new MercedesC63());
                                 Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiA8Eng.GetName());
                                 Console.WriteLine("Стоимость: {0}", newAudiA8Eng.GetCost());
                                 break;
                             case "3":
-                                var newAudiA8Meh = new Mehendi(new AudiA8());
+                                var newAudiA8Meh = new Mehendi(new MercedesC63());
                                 Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiA8Meh.GetName());
                                 Console.WriteLine("Стоимость: {0}", newAudiA8Meh.GetCost());
                                 break;
                             case "4":
-                                var newAudiA8Tires = new Tires(new AudiA8());
+                                var newAudiA8Tires = new Tires(new MercedesC63());
                                 Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiA8Tires.GetName());
                                 Console.WriteLine("Стоимость: {0}", newAudiA8Tires.GetCost());
                                 break;
@@ -604,8 +604,8 @@ namespace CarShowroom
                     }
                     if (chosenModel == "2")
                     {
-                        Console.WriteLine("Выбранное авто: {0}", audiR8.GetName());
-                        Console.WriteLine("Цена: {0}", audiR8.GetCost());
+                        Console.WriteLine("Выбранное авто: {0}", mercedesS600.GetName());
+                        Console.WriteLine("Цена: {0}", mercedesS600.GetCost());
                         Console.WriteLine("Выберите дополнительную опцию:");
                         Console.WriteLine("1)Кондиционер(+500$)" +
                                           "\n2)Двигатель(+15000$)" +
@@ -618,22 +618,22 @@ namespace CarShowroom
                         switch (chosenOption)
                         {
                             case "1":
-                                var nwAudiR8Cond = new Conditioner(new AudiR8());
+                                var nwAudiR8Cond = new Conditioner(new MercedesS600());
                                 Console.WriteLine("Ваш авто {0} ждет вас через месяц", nwAudiR8Cond.GetName());
                                 Console.WriteLine("Стоимость: {0}", nwAudiR8Cond.GetCost());
                                 break;
                             case "2":
-                                var newAudiR8Eng = new Engine(new AudiR8());
+                                var newAudiR8Eng = new Engine(new MercedesS600());
                                 Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiR8Eng.GetName());
                                 Console.WriteLine("Стоимость: {0}", newAudiR8Eng.GetCost());
                                 break;
                             case "3":
-                                var newAudiR8Meh = new Mehendi(new AudiR8());
+                                var newAudiR8Meh = new Mehendi(new MercedesS600());
                                 Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiR8Meh.GetName());
                                 Console.WriteLine("Стоимость: {0}", newAudiR8Meh.GetCost());
                                 break;
                             case "4":
-                                var newAudiR8Tires = new Tires(new AudiR8());
+                                var newAudiR8Tires = new Tires(new MercedesS600());
                                 Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiR8Tires.GetName());
                                 Console.WriteLine("Стоимость: {0}", newAudiR8Tires.GetCost());
                                 break;
@@ -641,8 +641,8 @@ namespace CarShowroom
                     }
                     if (chosenModel == "3")
                     {
-                        Console.WriteLine("Выбранное авто: {0}", audiTT.GetName());
-                        Console.WriteLine("Цена: {0}", audiTT.GetCost());
+                        Console.WriteLine("Выбранное авто: {0}", mercedesSLS63.GetName());
+                        Console.WriteLine("Цена: {0}", mercedesSLS63.GetCost());
                         Console.WriteLine("Выберите дополнительную опцию:");
                         Console.WriteLine("1)Кондиционер(+500$)" +
                                           "\n2)Двигатель(+15000$)" +
@@ -655,22 +655,22 @@ namespace CarShowroom
                         switch (chosenOption)
                         {
                             case "1":
-                                var nwAudiTTCond = new Conditioner(new AudiTT());
+                                var nwAudiTTCond = new Conditioner(new MercedesSLS63());
                                 Console.WriteLine("Ваш авто {0} ждет вас через месяц", nwAudiTTCond.GetName());
                                 Console.WriteLine("Стоимость: {0}", nwAudiTTCond.GetCost());
                                 break;
                             case "2":
-                                var nwAudiTTEng = new Engine(new AudiTT());
+                                var nwAudiTTEng = new Engine(new MercedesSLS63());
                                 Console.WriteLine("Ваш авто {0} ждет вас через месяц", nwAudiTTEng.GetName());
                                 Console.WriteLine("Стоимость: {0}", nwAudiTTEng.GetCost());
                                 break;
                             case "3":
-                                var newAudiTTMeh = new Mehendi(new AudiTT());
+                                var newAudiTTMeh = new Mehendi(new MercedesSLS63());
                                 Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiTTMeh.GetName());
                                 Console.WriteLine("Стоимость: {0}", newAudiTTMeh.GetCost());
                                 break;
                             case "4":
-                                var newAudiTTTires = new Tires(new AudiTT());
+                                var newAudiTTTires = new Tires(new MercedesSLS63());
                                 Console.WriteLine("Ваш авто {0} ждет вас через месяц", newAudiTTTires.GetName());
                                 Console.WriteLine("Стоимость: {0}", newAudiTTTires.GetCost());
                                 break;
